@@ -1,42 +1,91 @@
-#root {
-  max-width: 1280px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+#root{
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+.container {
+  padding: 0 1rem;
+  max-width: 960px; /* Adjust as needed for your ideal max width */
+  margin: 0 auto;  /* Automatic left/right margins for centering */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.btn {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 15px; /* Adjust padding for smaller screens */
+  cursor: pointer;
+  margin-top: 15px;
+  margin-right: 10px; /* Reduce margin between buttons */
+  margin-bottom: 10px; /* Reduce margin between buttons */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn:hover {
+  background: #4303d6;
+}
+
+.todo-list {
+  display: flex;  
+  flex-direction: column;      /* Enable flexbox for responsive arrangement */
+  flex-wrap: wrap;      /* Allow items to wrap to multiple lines */
+  justify-content: center; /* Center items horizontally */
+  text-align: center; /* Center align the content */
+  align-items: center; /* Center items horizontally */
+}
+.form-container {
+  margin-bottom: 20px; /* Add some space below the form container */
+}
+input{
+  margin-right: 20px;
+}
+h1{
+  margin-bottom: 10px;
+  text-align: center; /* Center align the content */
+  align-items: center; /* Center items horizontally */
+}
+.title {
+  border: 1px solid #ddd;
+  margin-bottom: 10px; /* Add some space below the title */
+  
+}
+
+.form {
+  display: inline-block; /* Make the form inline-block so it centers properly */
+}
+.columns-container {
+  display: flex;
+  justify-content: space-between; /* Distribute columns evenly */
+}
+
+.column {
+  width: 45%; /* Adjust this percentage if needed */
+}
+
+
+/* For smaller screens */
+@media (max-width: 360) {
+  .todo {
+    width: calc(100% - 30px); /* Calculate width to account for padding */
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 768px) {
+  .btn {
+    padding: 7px 10px; /* Further reduce padding for smaller screens */
+    margin-bottom: 7px; /* Further reduce margin between buttons */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
